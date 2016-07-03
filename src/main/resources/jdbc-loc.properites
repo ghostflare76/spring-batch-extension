@@ -1,0 +1,7 @@
+spring.jpa.hibernate.ddl-auto=create
+spring.jpa.database=H2
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.use_sql_comments=true
+logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE
+spring.datasource.url=jdbc:h2:mem:batchdb
+spring.datasource.username=sa

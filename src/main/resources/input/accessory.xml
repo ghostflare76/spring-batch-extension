@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<response>
+	<items>
+		<item>
+			<id>120000012</id>
+			<image>http://static.image.co.kr/1f9427ab835ec5678debd97fbfd91ed3_12.jpg
+			</image>
+			<name>귀고리</name>
+			<level>21</level>			
+			<level_desc>21레벨 이상 사용가능</level_desc>			
+			<public>비공개</public>
+		</item>
+		<item>
+			<id>120000013</id>
+			<image>http://static.image.co.kr/b86c117cb2c597d166d40c318e5b93d3_13.jpg
+			</image>
+			<name>귀장식</name>
+			<level>21</level>			
+			<level_desc>21레벨 이상 사용가능</level_desc>			
+			<public>비공개</public>
+		</item>
+	</items>
+</response>
