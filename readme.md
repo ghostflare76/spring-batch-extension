@@ -5,23 +5,26 @@ readers, processor, writers, and complex usecases.
 (ex : multi resource Job)
 
 ## OpenSource Requirement
-* Spring Batch 
+* Spring Batch
 * Spring Boot
 * Spring Data Jpa
-* Java Configuration 
+* Java Configuration
 
 Consider following batch jobs :
 
-로컬개발환경 
+로컬개발환경
 ```
-* A : Read XML files from folder  
-* B : process it   
-* C : Write into Database
+* READ XML to DB
+** A : Read XML files from folder
+** B : process it
+** C : Write into Database
+* READ DB to DB
+
 ```
-스테이징 및 LIVE 
+스테이징 및 LIVE
 ```
-* A : Read Http XML files from Api Server   
-* B : process it   
+* A : Read Http XML files from Api Server
+* B : process it
 * C : Write into Database
 ```
 ## General Informations
@@ -29,10 +32,10 @@ Consider following batch jobs :
 All Spring Batch Examples:
 
 * are tested with:
-  * Spring Batch 2.2.5.RELEASE
-  * Spring Framework 3.2.0.RELEASE
+  * Spring Batch 3.0.7.RELEASE
+  * Spring Framework 4.2.6.RELEASE
 * are provided "as is", no guarantees :-)
-* work with mssql database [127.0.0.1], 
+* work with H2 database [127.0.0.1],
 
 Overview for the project setup.
 
@@ -40,6 +43,8 @@ Overview for the project setup.
 
 The test modules are:
 
+* need profiles
+** JVM --Dspring.profile.actve=loc
 * spring batch test
     * XXXxmlToDbJob
 

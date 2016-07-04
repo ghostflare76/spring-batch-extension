@@ -6,9 +6,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
 @Configuration
-@PropertySource("batch.properties")
-@EnableBatchProcessing(modular=true)
+@PropertySource(value = "classpath:batch-${spring.profiles.active}.properties", ignoreResourceNotFound = true)
+@EnableBatchProcessing(modular = true)
 public class BatchConfig {
-
 
 }

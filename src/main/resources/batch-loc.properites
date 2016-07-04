@@ -1,4 +1,4 @@
-spring.batch.initializer.enabled=true
+spring.batch.initializer.enabled=false
 spring.batch.job.enabled=true
 #spring.batch.job.names=weaponDbToPrintJob
 spring.batch.job.names=accessoryXmlJob
