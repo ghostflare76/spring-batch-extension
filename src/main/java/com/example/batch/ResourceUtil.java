@@ -13,20 +13,20 @@ public class ResourceUtil {
 		if (resourcePath == null) {
 			return null;
 		}
-		
+
 		Resource resource = null;
 		String profile = System.getProperty("spring.profiles.active");
-		if (!StringUtils.hasText(profile) || "local".equals(profile)) {
+		if (!StringUtils.hasText(profile) || "opdev".equals(profile)) {
 			resource = new ClassPathResource(resourcePath);
 			return resource;
 		}
-		
+
 		try {
 			resource = new UrlResource(resourcePath);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
+
 		return resource;
 	}
 }

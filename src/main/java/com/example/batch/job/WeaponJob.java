@@ -23,7 +23,7 @@ import com.example.batch.processor.WeaponJobProcessor;
 
 @Configuration
 public class WeaponJob {
-	
+
 	@Autowired
 	private StepBuilderFactory stepBuilders;
 
@@ -40,7 +40,7 @@ public class WeaponJob {
 	public ItemReader<Weapon> reader() {
 		JpaPagingItemReader<Weapon> reader = new JpaPagingItemReader<Weapon>();
 		reader.setEntityManagerFactory(emf);
-		reader.setQueryString("select w FROM Weapon w");	
+		reader.setQueryString("select no,id,name FROM Weapon");
 		reader.setPageSize(420);
 		return reader;
 	}
@@ -57,11 +57,11 @@ public class WeaponJob {
 		return stepBuilders.get("weaponStep").<Weapon, WeaponBackup> chunk(420)
 			.reader(reader())
 			.processor(new WeaponJobProcessor())
-			.listener(logProcessListener())		
+			.listener(logProcessListener())
 			.writer(writer())
 			.build();
 	}
-	
+
 	@Bean(name = "weaponWriter")
 	public ItemWriter<WeaponBackup> writer() {
 		JpaItemWriter<WeaponBackup> writer = new JpaItemWriter<WeaponBackup>();
@@ -72,5 +72,5 @@ public class WeaponJob {
 	@Bean
 	public LogProcessListener logProcessListener(){
 		return new LogProcessListener();
-	}    
+	}
 }

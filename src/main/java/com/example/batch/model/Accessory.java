@@ -10,11 +10,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.PrePersist;
+import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name = "item")
-@Entity
+@Entity(name = "accessory")
 public class Accessory implements Serializable {
 
 	private static final long serialVersionUID = 1816606012461212301L;

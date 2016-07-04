@@ -7,7 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity
+@Entity(name = "Weapon")
 public class Weapon implements Serializable {
 
 	private static final long serialVersionUID = -2456048009186862543L;
